@@ -1,0 +1,575 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="29.5.5">
+  <diagram id="_8sBrRlsj3QjNcFljxSF" name="Page-1">
+    <mxGraphModel dx="3648" dy="576" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1700" background="#FFFFFF" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#1E293B;align=center;" value="RenewAI — Corrected Agent Architecture" vertex="1">
+          <mxGeometry height="30" width="1880" x="150" y="14" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;fontSize=10;fillColor=none;strokeColor=none;fontColor=#64748B;align=center;" value="Orchestrator selects channel → Critique A verifies selection with evidence → Planner builds execution plan → Draft Agent generates message (all channels) → Critique B reviews draft → Greeting/Closing wraps → Channel Agent sends" vertex="1">
+          <mxGeometry height="18" width="1880" x="150" y="44" as="geometry" />
+        </mxCell>
+        <mxCell id="sl_entry" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#94A3B8;fillColor=none;strokeColor=none;rotation=-90;" value="ENTRY" vertex="1">
+          <mxGeometry height="60" width="50" x="22" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="sl1" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#94A3B8;fillColor=none;strokeColor=none;rotation=-90;" value="STEP 1" vertex="1">
+          <mxGeometry height="60" width="50" x="22" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="sl2" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#94A3B8;fillColor=none;strokeColor=none;rotation=-90;" value="STEP 2" vertex="1">
+          <mxGeometry height="60" width="50" x="22" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="sl3" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#94A3B8;fillColor=none;strokeColor=none;rotation=-90;" value="STEP 3" vertex="1">
+          <mxGeometry height="60" width="50" x="22" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="sl4" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#94A3B8;fillColor=none;strokeColor=none;rotation=-90;" value="STEP 4" vertex="1">
+          <mxGeometry height="60" width="50" x="22" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="sl5" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#94A3B8;fillColor=none;strokeColor=none;rotation=-90;" value="STEP 5" vertex="1">
+          <mxGeometry height="60" width="50" x="22" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="sl6" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#94A3B8;fillColor=none;strokeColor=none;rotation=-90;" value="STEP 6" vertex="1">
+          <mxGeometry height="60" width="50" x="22" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="crm" parent="1" style="rounded=1;fillColor=#DBEAFE;strokeColor=#3B82F6;strokeWidth=2;fontColor=#1E40AF;fontSize=11;fontStyle=1;" value="CRM / Policy Engine  —  T-45 Trigger · Payment Status · Segment Data" vertex="1">
+          <mxGeometry height="42" width="760" x="660" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fastapi" parent="1" style="rounded=1;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=2;fontColor=#14532D;fontSize=11;fontStyle=1;" value="FastAPI (Async)  —  /trigger-renewal  ·  /webhook  ·  /dashboard-api" vertex="1">
+          <mxGeometry height="42" width="760" x="660" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="langgraph" parent="1" style="rounded=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontColor=#78350F;fontSize=11;fontStyle=1;" value="LangGraph — Stateful Async Graph  —  Per-policy thread · Interrupt nodes · Conditional edges · Human-in-loop" vertex="1">
+          <mxGeometry height="42" width="760" x="660" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_db_r" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="READS&#xa;&#xa;SQLite: policy_state&#xa;SQLite: interactions&#xa;SQLite: customers&#xa;SQLite: policies&#xa;Chroma: objection_library" vertex="1">
+          <mxGeometry height="120" width="168" x="72" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_bg" parent="1" style="rounded=1;fillColor=#E0F2FE;strokeColor=#0891B2;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="136" width="720" x="258" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_hdr" parent="1" style="fillColor=#0891B2;strokeColor=#0891B2;rounded=0;" value="" vertex="1">
+          <mxGeometry height="28" width="720" x="258" y="262" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_tag" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#BAE6FD;fillColor=none;strokeColor=none;" value="STEP 1" vertex="1">
+          <mxGeometry height="24" width="46" x="264" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_ttl" parent="1" style="text;html=1;fontSize=13;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="🎯  ORCHESTRATOR — Channel Selection Decision" vertex="1">
+          <mxGeometry height="24" width="654" x="314" y="264" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_sp" parent="1" style="rounded=1;fillColor=#DBEAFE;strokeColor=#93C5FD;fontSize=9;fontColor=#0C4A6E;align=left;verticalAlign=top;" value="System Prompt: You are the renewal orchestrator. Review the customer profile, policy state, and full interaction history. &#xa;Decide the NEXT best channel (Email / WhatsApp / Voice) and justify your choice with specific evidence from interaction history. &#xa;Evaluate: payment_done? channel_attempts so far? objection_count ≥ 3? distress_flag? Output JSON: { channel, justification, priority, fallback_channel, escalate: true/false }" vertex="1">
+          <mxGeometry height="52" width="700" x="268" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_out" parent="1" style="text;html=1;fontSize=9;fontColor=#0C4A6E;fillColor=none;strokeColor=none;align=left;" value="Output → { channel: &quot;WhatsApp&quot;, justification: &quot;email opened 3x no reply — switch to WA&quot;, priority: &quot;high&quot; }  →  sent to Critique Agent (Step 2) for evidence verification" vertex="1">
+          <mxGeometry height="22" width="700" x="268" y="352" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_note" parent="1" style="text;html=1;fontSize=8.5;fontColor=#DC2626;fillColor=none;strokeColor=none;align=left;" value="⚡ Direct escalation path: distress_flag=1 | objection_count ≥ 3 | HNI grievance → skips Steps 2–5, routes straight to Human Queue Manager" vertex="1">
+          <mxGeometry height="16" width="700" x="268" y="376" as="geometry" />
+        </mxCell>
+        <mxCell id="orch_db_w" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="WRITES&#xa;&#xa;SQLite: policy_state&#xa;(current_node,&#xa;last_channel)" vertex="1">
+          <mxGeometry height="100" width="152" x="998" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="crit1_db_r" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="READS&#xa;&#xa;SQLite: interactions&#xa;SQLite: customers&#xa;Chroma: regulatory_guidelines" vertex="1">
+          <mxGeometry height="100" width="168" x="72" y="432" as="geometry" />
+        </mxCell>
+        <mxCell id="crit1_bg" parent="1" style="rounded=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="150" width="720" x="258" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="crit1_hdr" parent="1" style="fillColor=#E11D48;strokeColor=#E11D48;rounded=0;" value="" vertex="1">
+          <mxGeometry height="28" width="720" x="258" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="crit1_tag" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#FECDD3;fillColor=none;strokeColor=none;" value="STEP 2" vertex="1">
+          <mxGeometry height="24" width="46" x="264" y="426" as="geometry" />
+        </mxCell>
+        <mxCell id="crit1_ttl" parent="1" style="text;html=1;fontSize=13;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="🔍  CRITIQUE — Phase A: Verify Channel Selection (evidence-based)" vertex="1">
+          <mxGeometry height="24" width="654" x="314" y="426" as="geometry" />
+        </mxCell>
+        <mxCell id="crit1_sp" parent="1" style="rounded=1;fillColor=#FFE4E6;strokeColor=#FECDD3;fontSize=9;fontColor=#9F1239;align=left;verticalAlign=top;" value="System Prompt: You are the Critique Agent, Phase A. Review the Orchestrator&#39;s channel selection. Verify with evidence from interaction history: (1) Is there data supporting &#xa;this channel choice? e.g. email opened but no payment reply for 3 days → WA is justified. (2) Has this channel already been fully exhausted (≥ 3 attempts with no result)? &#xa;(3) Does the customer segment/preference align with this channel? (4) Is the escalation threshold already met? Return: APPROVED (proceed to Planner with confidence &#xa;score) or OVERRIDE (specify alternative channel + evidence reference). Two consecutive overrides → flag for Human Queue." vertex="1">
+          <mxGeometry height="68" width="700" x="268" y="458" as="geometry" />
+        </mxCell>
+        <mxCell id="crit1_out" parent="1" style="text;html=1;fontSize=9;fontColor=#9F1239;fillColor=none;strokeColor=none;align=left;" value="Output → APPROVED (→ Planner, Step 3)   |   OVERRIDE (→ back to Orchestrator, max 1 retry, then Human Queue)" vertex="1">
+          <mxGeometry height="18" width="700" x="268" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="crit1_db_w" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="WRITES&#xa;&#xa;SQLite: audit_logs&#xa;(channel decision +&#xa;evidence reference)" vertex="1">
+          <mxGeometry height="100" width="152" x="998" y="432" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_db_r" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="READS&#xa;&#xa;SQLite: customers&#xa;SQLite: policies&#xa;SQLite: interactions&#xa;Chroma: policy_documents&#xa;Chroma: objection_library&#xa;Chroma: regulatory_guidelines" vertex="1">
+          <mxGeometry height="128" width="168" x="72" y="614" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_bg" parent="1" style="rounded=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="150" width="720" x="258" y="606" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_hdr" parent="1" style="fillColor=#7C3AED;strokeColor=#7C3AED;rounded=0;" value="" vertex="1">
+          <mxGeometry height="28" width="720" x="258" y="606" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_tag" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#DDD6FE;fillColor=none;strokeColor=none;" value="STEP 3" vertex="1">
+          <mxGeometry height="24" width="46" x="264" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_ttl" parent="1" style="text;html=1;fontSize=13;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="🧠  PLANNER — Channel Execution Plan (runs after Critique A approves channel)" vertex="1">
+          <mxGeometry height="24" width="654" x="314" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_sp" parent="1" style="rounded=1;fillColor=#EDE9FE;strokeColor=#C4B5FD;fontSize=9;fontColor=#4C1D95;align=left;verticalAlign=top;" value="System Prompt: The Orchestrator has selected {channel}. Build a detailed execution plan for this specific channel. Do NOT generate the message — &#xa;only the plan for the Draft Agent. Specify: tone (formal/friendly/empathetic/HNI), language, key policy facts to include (retrieve from policy_documents — &#xa;due date, premium, fund value if ULIP, top 3 benefits), which objection playbook to apply (retrieve from objection_library), &#xa;personalization elements (customer name, policy type), preferred timing window, CTA type, and distress watch keywords for this customer profile." vertex="1">
+          <mxGeometry height="68" width="700" x="268" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_out" parent="1" style="text;html=1;fontSize=9;fontColor=#4C1D95;fillColor=none;strokeColor=none;align=left;" value="Output → Execution Plan JSON: { tone, language, key_facts[], objection_playbook_id, greeting_style, timing_window, cta_type }  →  Draft Agent + Greeting/Closing Agent (both in Step 4)" vertex="1">
+          <mxGeometry height="18" width="700" x="268" y="712" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_note" parent="1" style="text;html=1;fontSize=8.5;fontColor=#7C3AED;fontStyle=2;fillColor=none;strokeColor=none;align=left;" value="Runs per channel activation — NOT once at start. Re-plans each time Orchestrator picks a new channel." vertex="1">
+          <mxGeometry height="16" width="700" x="268" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="plan_db_w" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="WRITES&#xa;&#xa;SQLite: policy_state&#xa;(waiting_for,&#xa;objection_count)" vertex="1">
+          <mxGeometry height="90" width="152" x="998" y="614" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_db_r" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="READS&#xa;&#xa;SQLite: customers&#xa;SQLite: interactions&#xa;SQLite: policies" vertex="1">
+          <mxGeometry height="90" width="168" x="72" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_bg" parent="1" style="rounded=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="172" width="340" x="258" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_hdr" parent="1" style="fillColor=#0D9488;strokeColor=#0D9488;rounded=0;" value="" vertex="1">
+          <mxGeometry height="28" width="340" x="258" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_tag" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#CCFBF1;fillColor=none;strokeColor=none;" value="STEP 4a" vertex="1">
+          <mxGeometry height="24" width="54" x="264" y="812" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_ttl" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="👋  GREETING / CLOSING" vertex="1">
+          <mxGeometry height="24" width="270" x="320" y="812" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_par_note" parent="1" style="text;html=1;fontSize=8;fontStyle=2;fontColor=#99F6E4;fillColor=none;strokeColor=none;" value="&lt;font style=&quot;color: rgb(0, 102, 0);&quot;&gt;Runs in parallel with Draft Agent (Step 4b)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="14" width="320" x="268" y="842" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_greet_lbl" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#0F766E;fillColor=none;strokeColor=none;" value="Greeting Prompt:" vertex="1">
+          <mxGeometry height="14" width="120" x="268" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_greet" parent="1" style="rounded=1;fillColor=#CCFBF1;strokeColor=#99F6E4;fontSize=8.5;fontColor=#134E4A;align=left;verticalAlign=top;" value="Generate a culturally appropriate, warm greeting in {language} using &#xa;customer&#39;s first name and policy type. Match {tone} from Planner plan. &#xa;Not robotic. E.g. Hindi: &#39;नमस्ते {name} जी, आपकी {policy_type} पॉलिसी के बारे में...&#39;" vertex="1">
+          <mxGeometry height="44" width="320" x="268" y="876" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_close_lbl" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#0F766E;fillColor=none;strokeColor=none;" value="Closing Prompt:" vertex="1">
+          <mxGeometry height="14" width="120" x="268" y="924" as="geometry" />
+        </mxCell>
+        <mxCell id="gc_close" parent="1" style="rounded=1;fillColor=#CCFBF1;strokeColor=#99F6E4;fontSize=8.5;fontColor=#134E4A;align=left;verticalAlign=top;" value="Summarise: what was discussed, next step, payment link. Mandatory line: &#39;&#xa;This message is from an AI assistant. Reply HUMAN anytime for a specialist.&#39; &#xa;Log to audit_logs." vertex="1">
+          <mxGeometry height="38" width="320" x="268" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="Dsd8oQJBXSBmmL65lgK3-2" edge="1" parent="1" source="draft_db_r" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="plan_db_w" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_db_r" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="READS&#xa;&#xa;Chroma: policy_documents&#xa;Chroma: objection_library&#xa;SQLite: policies&#xa;SQLite: interactions" vertex="1">
+          <mxGeometry height="112" width="168" x="998" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_bg" parent="1" style="rounded=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="212" width="361" x="618" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_hdr" parent="1" style="fillColor=#D97706;strokeColor=#D97706;rounded=0;" value="" vertex="1">
+          <mxGeometry height="28" width="360" x="618" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_tag" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#FEF3C7;fillColor=none;strokeColor=none;" value="STEP 4b" vertex="1">
+          <mxGeometry height="24" width="54" x="624" y="803" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_ttl" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="✍️  DRAFT AGENT — Message Generation (NEW)" vertex="1">
+          <mxGeometry height="24" width="247" x="680" y="801" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_sub" parent="1" style="text;html=1;fontSize=8;fontStyle=2;fontColor=#FDE68A;fillColor=none;strokeColor=none;" value="&lt;font style=&quot;color: rgb(51, 0, 0);&quot;&gt;1 agent, 3 channel-specific system prompts — body only (greeting/closing added by&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(51, 0, 0);&quot;&gt;Greeting/Closing Agent)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="14" width="340" x="628" y="825" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_email_lbl" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#B45309;fillColor=none;strokeColor=none;" value="📧 Email Prompt:" vertex="1">
+          <mxGeometry height="14" width="110" x="628" y="846" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_email" parent="1" style="rounded=1;fillColor=#FEF3C7;strokeColor=#FDE68A;fontSize=8.5;fontColor=#78350F;align=left;verticalAlign=top;" value="Draft renewal email body in {language}/{tone}. Use ONLY figures from retrieved &#xa;policy_document. Include due date, premium, top 3 benefits, CTA + payment link. &#xa;Leave [GREETING] and [CLOSING] slots." vertex="1">
+          <mxGeometry height="36" width="340" x="628" y="862" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_wa_lbl" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#B45309;fillColor=none;strokeColor=none;" value="💬 WhatsApp Prompt:" vertex="1">
+          <mxGeometry height="14" width="130" x="628" y="902" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_wa" parent="1" style="rounded=1;fillColor=#FEF3C7;strokeColor=#FDE68A;fontSize=8.5;fontColor=#78350F;align=left;verticalAlign=top;" value="Draft WA reply body in {language}, max 200 chars. Apply objection playbook. &#xa;Detect distress; set distress_flag if found. Leave [GREETING] and [CLOSING] slots." vertex="1">
+          <mxGeometry height="30" width="340" x="628" y="918" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_voice_lbl" parent="1" style="text;html=1;fontSize=9;fontStyle=1;fontColor=#B45309;fillColor=none;strokeColor=none;" value="📞 Voice Prompt:" vertex="1">
+          <mxGeometry height="14" width="110" x="628" y="952" as="geometry" />
+        </mxCell>
+        <mxCell id="draft_voice" parent="1" style="rounded=1;fillColor=#FEF3C7;strokeColor=#FDE68A;fontSize=8.5;fontColor=#78350F;align=left;verticalAlign=top;" value="Generate {language} call script body with [PAUSE] markers. Segments: &#xa;premium reminder → benefit highlight → objection handle → payment CTA. &#xa;Mark [ESCALATE] if distress detected. Leave [GREETING] and [CLOSING] slots." vertex="1">
+          <mxGeometry height="36" width="340" x="628" y="968" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_db_r" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="READS&#xa;&#xa;Chroma: regulatory_guidelines&#xa;Chroma: policy_documents&#xa;SQLite: customers&#xa;(segment/tone check)" vertex="1">
+          <mxGeometry height="108" width="168" x="72" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_bg" parent="1" style="rounded=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="166" width="720" x="258" y="1032" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_hdr" parent="1" style="fillColor=#E11D48;strokeColor=#E11D48;rounded=0;" value="" vertex="1">
+          <mxGeometry height="28" width="720" x="258" y="1032" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_tag" parent="1" style="text;html=1;fontSize=8;fontStyle=1;fontColor=#FECDD3;fillColor=none;strokeColor=none;" value="STEP 5" vertex="1">
+          <mxGeometry height="24" width="46" x="264" y="1034" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_ttl" parent="1" style="text;html=1;fontSize=13;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="🔍  CRITIQUE — Phase B: Full Draft Review (compliance + accuracy + tone + distress + disclosure)" vertex="1">
+          <mxGeometry height="24" width="654" x="314" y="1034" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_sp" parent="1" style="rounded=1;fillColor=#FFE4E6;strokeColor=#FECDD3;fontSize=9;fontColor=#9F1239;align=left;verticalAlign=top;" value="System Prompt: You are the Critique Agent, Phase B. Review the fully assembled draft (greeting + body + closing) from ALL three channel agents (same prompt &#xa;applies). Run 5 checks: (1) ACCURACY — all figures must match retrieved policy_document, no hallucinated numbers. (2) COMPLIANCE — no guaranteed &#xa;return claims, no IRDAI-unapproved language, no competitor mentions. (3) TONE — matches customer segment and Planner-specified tone. (4) DISTRESS SCAN — &#xa;no phrasing that heightens anxiety or pressure. (5) AI DISCLOSURE — closing must identify the sender as an AI and offer human opt-out. Return: APPROVED (&#xa;channel agent sends) or REVISE with line-level feedback. Max 2 revision loops before escalation to Human Queue." vertex="1">
+          <mxGeometry height="72" width="700" x="268" y="1066" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_checks" parent="1" style="text;html=1;fontSize=9;fontColor=#BE123C;fillColor=none;strokeColor=none;align=left;" value="5 Checks: ✅ Accuracy  ✅ Compliance (IRDAI)  ✅ Tone match  ✅ Distress scan  ✅ AI disclosure  —  Same checks for Email, WhatsApp, and Voice" vertex="1">
+          <mxGeometry height="18" width="700" x="268" y="1142" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_out" parent="1" style="text;html=1;fontSize=9;fontColor=#9F1239;fillColor=none;strokeColor=none;align=left;" value="Output → APPROVED (→ channel agent executes send)   |   REVISE with line-level feedback (→ Draft Agent, max 2 loops, then Human Queue)" vertex="1">
+          <mxGeometry height="18" width="700" x="268" y="1162" as="geometry" />
+        </mxCell>
+        <mxCell id="crit2_db_w" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="WRITES&#xa;&#xa;SQLite: audit_logs&#xa;(every draft + decision&#xa;stored for IRDAI)" vertex="1">
+          <mxGeometry height="100" width="152" x="998" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="ch_hdr_lbl" parent="1" style="text;html=1;fontSize=10;fontStyle=1;fontColor=#475569;fillColor=none;strokeColor=none;" value="STEP 6  —  Channel Agent Executes Send  (assembles: [GREETING] + approved draft body + [CLOSING], then dispatches)" vertex="1">
+          <mxGeometry height="18" width="720" x="258" y="1214" as="geometry" />
+        </mxCell>
+        <mxCell id="email_bg" parent="1" style="rounded=1;fillColor=#FFF7ED;strokeColor=#EA580C;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="156" width="218" x="258" y="1238" as="geometry" />
+        </mxCell>
+        <mxCell id="email_hdr2" parent="1" style="fillColor=#EA580C;strokeColor=#EA580C;rounded=0;" value="" vertex="1">
+          <mxGeometry height="24" width="218" x="258" y="1238" as="geometry" />
+        </mxCell>
+        <mxCell id="email_ttl" parent="1" style="text;html=1;fontSize=11;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="📧  EMAIL AGENT" vertex="1">
+          <mxGeometry height="20" width="202" x="266" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="email_body" parent="1" style="text;html=1;fontSize=9;fontColor=#7C2D12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;" value="Assembles final message: fills [GREETING] +&amp;nbsp;&lt;div&gt;[CLOSING] slots from Greeting/Closing Agent&amp;nbsp;&lt;/div&gt;&lt;div&gt;output. Sends via MockEmailSender →&amp;nbsp;&lt;/div&gt;&lt;div&gt;logs to /logs/emails.json. Writes interaction to SQLite.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="198" x="268" y="1266" as="geometry" />
+        </mxCell>
+        <mxCell id="email_mock" parent="1" style="rounded=1;fillColor=#FFEDD5;strokeColor=#EA580C;fontSize=8.5;fontColor=#7C2D12;align=left;" value="Mock: MockEmailSender&#xa;Webhook: /webhook/email/{id}&#xa;Events: opened/clicked/ignored" vertex="1">
+          <mxGeometry height="44" width="198" x="268" y="1322" as="geometry" />
+        </mxCell>
+        <mxCell id="email_esc" parent="1" style="text;html=1;fontSize=8;fontColor=#DC2626;fillColor=none;strokeColor=none;align=left;" value="⚠ 3× ignored · complaint · ULIP complex" vertex="1">
+          <mxGeometry height="18" width="198" x="268" y="1368" as="geometry" />
+        </mxCell>
+        <mxCell id="wa_bg" parent="1" style="rounded=1;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="156" width="218" x="493" y="1238" as="geometry" />
+        </mxCell>
+        <mxCell id="wa_hdr2" parent="1" style="fillColor=#16A34A;strokeColor=#16A34A;rounded=0;" value="" vertex="1">
+          <mxGeometry height="24" width="218" x="493" y="1238" as="geometry" />
+        </mxCell>
+        <mxCell id="wa_ttl" parent="1" style="text;html=1;fontSize=11;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="💬  WHATSAPP AGENT" vertex="1">
+          <mxGeometry height="20" width="202" x="501" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="wa_body" parent="1" style="text;html=1;fontSize=9;fontColor=#14532D;fillColor=none;strokeColor=none;align=left;verticalAlign=top;" value="Assembles: [GREETING] + draft reply +&amp;nbsp;&lt;div&gt;[CLOSING]. Sends via MockWASender.&amp;nbsp;&lt;/div&gt;&lt;div&gt;Multi-turn memory stored in&amp;nbsp;&lt;/div&gt;&lt;div&gt;policy_state.last_wa_thread. Intent classify on customer reply.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="198" x="503" y="1266" as="geometry" />
+        </mxCell>
+        <mxCell id="wa_mock" parent="1" style="rounded=1;fillColor=#DCFCE7;strokeColor=#16A34A;fontSize=8.5;fontColor=#14532D;align=left;" value="Mock: MockWASender&#xa;Webhook: /webhook/wa/{id}&#xa;Events: reply/read/ignored" vertex="1">
+          <mxGeometry height="44" width="198" x="503" y="1322" as="geometry" />
+        </mxCell>
+        <mxCell id="wa_esc" parent="1" style="text;html=1;fontSize=8;fontColor=#DC2626;fillColor=none;strokeColor=none;align=left;" value="⚠ distress_flag · 3× objections · grievance" vertex="1">
+          <mxGeometry height="18" width="198" x="503" y="1368" as="geometry" />
+        </mxCell>
+        <mxCell id="voice_bg" parent="1" style="rounded=1;fillColor=#FDF4FF;strokeColor=#9333EA;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="156" width="250" x="728" y="1238" as="geometry" />
+        </mxCell>
+        <mxCell id="voice_hdr2" parent="1" style="fillColor=#9333EA;strokeColor=#9333EA;rounded=0;" value="" vertex="1">
+          <mxGeometry height="24" width="250" x="728" y="1238" as="geometry" />
+        </mxCell>
+        <mxCell id="voice_ttl" parent="1" style="text;html=1;fontSize=11;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="📞  VOICE AGENT" vertex="1">
+          <mxGeometry height="20" width="234" x="736" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="voice_body" parent="1" style="text;html=1;fontSize=9;fontColor=#581C87;fillColor=none;strokeColor=none;align=left;verticalAlign=top;" value="Assembles: [GREETING] + call script + [CLOSING].&amp;nbsp;&lt;div&gt;TTS via ElevenLabs free tier. Transcript on return →&amp;nbsp;&lt;/div&gt;&lt;div&gt;intent classifier → resume/escalate.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="52" width="230" x="738" y="1266" as="geometry" />
+        </mxCell>
+        <mxCell id="voice_mock" parent="1" style="rounded=1;fillColor=#F3E8FF;strokeColor=#9333EA;fontSize=8.5;fontColor=#581C87;align=left;" value="Mock: ElevenLabs TTS (free tier) or text-mode&#xa;Webhook: /webhook/voice/{id}&#xa;Events: transcript/no-answer/escalate" vertex="1">
+          <mxGeometry height="44" width="230" x="738" y="1322" as="geometry" />
+        </mxCell>
+        <mxCell id="voice_esc" parent="1" style="text;html=1;fontSize=8;fontColor=#DC2626;fillColor=none;strokeColor=none;align=left;" value="⚠ anger/distress · 3× objections · explicit HUMAN" vertex="1">
+          <mxGeometry height="18" width="230" x="738" y="1368" as="geometry" />
+        </mxCell>
+        <mxCell id="ch_db_rw" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="ALL CHANNEL AGENTS&#xa;&#xa;WRITE: SQLite: interactions&#xa;WRITE: SQLite: policy_state&#xa;  (sentiment_score,&#xa;   distress_flag)&#xa;READ: SQLite: policies&#xa;READ: SQLite: policy_state" vertex="1">
+          <mxGeometry height="150" width="168" x="998" y="1238" as="geometry" />
+        </mxCell>
+        <mxCell id="human_bg" parent="1" style="rounded=1;fillColor=#FFFBEB;strokeColor=#B45309;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="226" width="380" x="1216" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="human_hdr2" parent="1" style="fillColor=#B45309;strokeColor=#B45309;rounded=0;" value="" vertex="1">
+          <mxGeometry height="28" width="380" x="1216" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="human_ttl" parent="1" style="text;html=1;fontSize=11;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="👤  HUMAN QUEUE MANAGER  —  Escalation Terminal" vertex="1">
+          <mxGeometry height="24" width="364" x="1224" y="532" as="geometry" />
+        </mxCell>
+        <mxCell id="human_trig" parent="1" style="text;html=1;fontSize=9;fontColor=#92400E;fillColor=none;strokeColor=none;align=left;" value="Triggered by: distress_flag=1  ·  objection_count ≥ 3  ·  HNI grievance  ·&amp;nbsp;&lt;div&gt;&amp;nbsp;Critique A override ×2  ·  Draft revision ×2&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="360" x="1226" y="564" as="geometry" />
+        </mxCell>
+        <mxCell id="human_sp" parent="1" style="rounded=1;fillColor=#FEF3C7;strokeColor=#FDE68A;fontSize=9;fontColor=#92400E;align=left;verticalAlign=top;" value="System Prompt: Generate a specialist briefing note. Include: policy summary, full &#xa;AI interaction history with channel attempts, sentiment trajectory across all interactions, &#xa;detected distress reason (keyword + context), recommended approach for human &#xa;specialist, active compliance flags. Format: structured JSON + plain-language summary." vertex="1">
+          <mxGeometry height="64" width="360" x="1226" y="596" as="geometry" />
+        </mxCell>
+        <mxCell id="human_out" parent="1" style="text;html=1;fontSize=9;fontColor=#B45309;fillColor=none;strokeColor=none;align=left;" value="Output → Briefing note → Dashboard  ·  policy_state.mode&amp;nbsp;&lt;div&gt;= HUMAN_CONTROL  ·  AI fully locked&lt;/div&gt;" vertex="1">
+          <mxGeometry height="18" width="360" x="1226" y="664" as="geometry" />
+        </mxCell>
+        <mxCell id="human_db" parent="1" style="text;html=1;fontSize=8.5;fontColor=#64748B;fillColor=none;strokeColor=none;align=left;" value="Writes: SQLite (escalation_cases · audit_logs · policy_state.mode = HUMAN_CONTROL)" vertex="1">
+          <mxGeometry height="16" width="360" x="1226" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="human_sla" parent="1" style="text;html=1;fontSize=8.5;fontColor=#DC2626;fillColor=none;strokeColor=none;align=left;" value="SLA: &lt;2h response  ·  Priority scoring  ·  Specialist assigned  ·  AI locked until human resolves" vertex="1">
+          <mxGeometry height="16" width="360" x="1226" y="718" as="geometry" />
+        </mxCell>
+        <mxCell id="human_reads_box" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=9;fontColor=#475569;align=left;verticalAlign=top;" value="READS: SQLite: interactions&#xa;         SQLite: policies&#xa;         SQLite: customers&#xa;WRITES: SQLite: escalation_cases&#xa;          SQLite: audit_logs&#xa;          SQLite: policy_state" vertex="1">
+          <mxGeometry height="110" width="190" x="1216" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="data_divider" parent="1" style="text;html=1;fontSize=10;fontStyle=1;fontColor=#94A3B8;fillColor=none;strokeColor=none;" value="DATA LAYER  —  All agents read/write below" vertex="1">
+          <mxGeometry height="18" width="400" x="72" y="1428" as="geometry" />
+        </mxCell>
+        <mxCell id="sqlite_bg" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#475569;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="122" width="580" x="72" y="1452" as="geometry" />
+        </mxCell>
+        <mxCell id="sqlite_hdr2" parent="1" style="fillColor=#475569;strokeColor=#475569;rounded=0;" value="" vertex="1">
+          <mxGeometry height="24" width="580" x="72" y="1452" as="geometry" />
+        </mxCell>
+        <mxCell id="sqlite_ttl" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="🗄️  SQLite (Async aiosqlite)  —  Stateful Store + Audit Trail" vertex="1">
+          <mxGeometry height="20" width="564" x="80" y="1454" as="geometry" />
+        </mxCell>
+        <mxCell id="sqlite_tbls" parent="1" style="text;html=1;fontSize=10;fontColor=#1E293B;fillColor=none;strokeColor=none;align=center;" value="customers  ·  policies  ·  policy_state  ·  interactions  ·  escalation_cases  ·  audit_logs" vertex="1">
+          <mxGeometry height="18" width="564" x="80" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="sqlite_who" parent="1" style="text;html=1;fontSize=9;fontColor=#475569;fillColor=none;strokeColor=none;align=center;" value="READ: Orchestrator · Planner · Draft · Greeting/Closing · Critique A+B · Human Queue · Dashboard" vertex="1">
+          <mxGeometry height="16" width="564" x="80" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="sqlite_who2" parent="1" style="text;html=1;fontSize=9;fontColor=#475569;fillColor=none;strokeColor=none;align=center;" value="WRITE: All channel agents (interactions) · Orchestrator (policy_state) · Critique A+B (audit_logs) · Human Queue (escalation_cases, audit_logs)" vertex="1">
+          <mxGeometry height="18" width="564" x="80" y="1518" as="geometry" />
+        </mxCell>
+        <mxCell id="sqlite_note" parent="1" style="text;html=1;fontSize=9;fontColor=#64748B;fillColor=none;strokeColor=none;align=center;" value="IRDAI audit trail: every agent action, prompt version used, RAG chunks retrieved, decision with reason — all timestamped" vertex="1">
+          <mxGeometry height="28" width="564" x="80" y="1538" as="geometry" />
+        </mxCell>
+        <mxCell id="chroma_bg" parent="1" style="rounded=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="122" width="520" x="672" y="1452" as="geometry" />
+        </mxCell>
+        <mxCell id="chroma_hdr2" parent="1" style="fillColor=#7C3AED;strokeColor=#7C3AED;rounded=0;" value="" vertex="1">
+          <mxGeometry height="24" width="520" x="672" y="1452" as="geometry" />
+        </mxCell>
+        <mxCell id="chroma_ttl" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="🔮  Chroma Vector DB  —  Hybrid RAG" vertex="1">
+          <mxGeometry height="20" width="504" x="680" y="1454" as="geometry" />
+        </mxCell>
+        <mxCell id="chroma_cols" parent="1" style="text;html=1;fontSize=10;fontColor=#4C1D95;fillColor=none;strokeColor=none;align=center;" value="objection_library  ·  policy_documents  ·  regulatory_guidelines" vertex="1">
+          <mxGeometry height="18" width="504" x="680" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="chroma_who" parent="1" style="text;html=1;fontSize=9;fontColor=#4C1D95;fillColor=none;strokeColor=none;align=center;" value="objection_library: Orchestrator, Planner, Draft Agent (WA), Critique A  |  policy_documents: Planner, Draft Agent (Email/Voice),&amp;nbsp;&lt;div&gt;Critique B  |  regulatory_guidelines: Planner, Critique A+B&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="504" x="680" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="chroma_note" parent="1" style="text;html=1;fontSize=9;fontColor=#64748B;fillColor=none;strokeColor=none;align=center;" value="Updated live via Dashboard CRUD  ·  No redeployment needed  ·  Changes reflected on next RAG query" vertex="1">
+          <mxGeometry height="38" width="504" x="680" y="1528" as="geometry" />
+        </mxCell>
+        <mxCell id="dash_bg" parent="1" style="rounded=1;fillColor=#FFF7ED;strokeColor=#C2410C;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="122" width="308" x="1254" y="1452" as="geometry" />
+        </mxCell>
+        <mxCell id="dash_hdr2" parent="1" style="fillColor=#C2410C;strokeColor=#C2410C;rounded=0;" value="" vertex="1">
+          <mxGeometry height="24" width="290" x="1262" y="1452" as="geometry" />
+        </mxCell>
+        <mxCell id="dash_ttl" parent="1" style="text;html=1;fontSize=12;fontStyle=1;fontColor=#FFFFFF;fillColor=none;strokeColor=none;" value="🖥️  AGENT CONTROL DASHBOARD" vertex="1">
+          <mxGeometry height="20" width="254" x="1280" y="1454" as="geometry" />
+        </mxCell>
+        <mxCell id="dash_feat" parent="1" style="text;html=1;fontSize=9;fontColor=#7C2D12;fillColor=none;strokeColor=none;align=left;verticalAlign=top;" value="Prompt editor: all 8 agents (Orchestrator, Critique A+B, Planner,&amp;nbsp;&lt;div&gt;Draft, Greeting/Closing, Channel, Human Queue)  ·&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Tone/language/threshold controls  ·&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(124, 45, 18), rgb(240, 173, 149));&quot;&gt;Objection library CRUD  ·&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(124, 45, 18), rgb(240, 173, 149));&quot;&gt;&amp;nbsp;Live graph state viewer  ·  Human queue + SLA  ·&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;Audit log export (IRDAI)  ·  A/B test manager&lt;/div&gt;" vertex="1">
+          <mxGeometry height="86" width="290" x="1263" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="wh_bar" parent="1" style="rounded=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="22" width="1530" x="72" y="1408" as="geometry" />
+        </mxCell>
+        <mxCell id="wh_lbl" parent="1" style="text;html=1;fontSize=9;fontStyle=2;fontColor=#64748B;fillColor=none;strokeColor=none;align=center;" value="WEBHOOK / EVENT CALLBACKS  —  Email opened · WA replied · Voice transcript · Payment confirmed  →  FastAPI resumes LangGraph thread  →  back to Orchestrator for next decision" vertex="1">
+          <mxGeometry height="18" width="1530" x="61" y="1403" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_bg" parent="1" style="rounded=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="192" width="200" x="1660" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_ttl" parent="1" style="text;html=1;fontSize=11;fontStyle=1;fontColor=#1E293B;fillColor=none;strokeColor=none;" value="Legend" vertex="1">
+          <mxGeometry height="18" width="180" x="1670" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="l_main" edge="1" parent="1" style="edgeStyle=none;strokeColor=#0891B2;strokeWidth=2.5;" value="">
+          <mxGeometry height="14" width="60" x="1670" y="103" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l_main_t" parent="1" style="text;html=1;fontSize=9;fontColor=#374151;fillColor=none;strokeColor=none;" value="Main flow" vertex="1">
+          <mxGeometry height="16" width="80" x="1736" y="101" as="geometry" />
+        </mxCell>
+        <mxCell id="l_crit" edge="1" parent="1" style="edgeStyle=none;strokeColor=#E11D48;strokeWidth=2;dashed=1;" value="">
+          <mxGeometry height="14" width="60" x="1670" y="124" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="131" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l_crit_t" parent="1" style="text;html=1;fontSize=9;fontColor=#374151;fillColor=none;strokeColor=none;" value="Critique loop" vertex="1">
+          <mxGeometry height="16" width="80" x="1736" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="l_esc" edge="1" parent="1" style="edgeStyle=none;strokeColor=#B45309;strokeWidth=2;" value="">
+          <mxGeometry height="14" width="60" x="1670" y="145" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="152" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l_esc_t" parent="1" style="text;html=1;fontSize=9;fontColor=#374151;fillColor=none;strokeColor=none;" value="Escalation" vertex="1">
+          <mxGeometry height="16" width="80" x="1736" y="143" as="geometry" />
+        </mxCell>
+        <mxCell id="l_par" edge="1" parent="1" style="edgeStyle=none;strokeColor=#0D9488;strokeWidth=1.5;dashed=1;" value="">
+          <mxGeometry height="14" width="60" x="1670" y="166" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="173" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l_par_t" parent="1" style="text;html=1;fontSize=9;fontColor=#374151;fillColor=none;strokeColor=none;" value="Parallel step" vertex="1">
+          <mxGeometry height="16" width="80" x="1736" y="164" as="geometry" />
+        </mxCell>
+        <mxCell id="l_wh" edge="1" parent="1" style="edgeStyle=none;strokeColor=#475569;strokeWidth=1.5;dashed=1;" value="">
+          <mxGeometry height="14" width="60" x="1670" y="187" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="194" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l_wh_t" parent="1" style="text;html=1;fontSize=9;fontColor=#374151;fillColor=none;strokeColor=none;" value="Webhook/async" vertex="1">
+          <mxGeometry height="16" width="80" x="1736" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="l_db" edge="1" parent="1" style="edgeStyle=none;strokeColor=#CBD5E1;strokeWidth=1;" value="">
+          <mxGeometry height="14" width="60" x="1670" y="208" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="215" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l_db_t" parent="1" style="text;html=1;fontSize=9;fontColor=#374151;fillColor=none;strokeColor=none;" value="DB reads/writes" vertex="1">
+          <mxGeometry height="16" width="80" x="1736" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="crm" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#3B82F6;strokeWidth=2;fontSize=9;fontColor=#3B82F6;" target="fastapi" value="T-45 trigger">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="fastapi" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#16A34A;strokeWidth=2;fontSize=9;fontColor=#16A34A;" target="langgraph" value="invoke(policy_thread)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="langgraph" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0891B2;strokeWidth=2.5;fontSize=9;fontColor=#0891B2;" target="orch_bg" value="start graph">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="229" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="orch_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#E11D48;strokeWidth=2;dashed=1;fontSize=9;fontColor=#E11D48;" target="crit1_bg" value="routing decision for verification">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="crit1_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#7C3AED;strokeWidth=2.5;fontSize=9;fontColor=#7C3AED;" target="plan_bg" value="APPROVED → build execution plan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" edge="1" parent="1" source="crit1_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#E11D48;strokeWidth=1.5;dashed=1;fontSize=9;fontColor=#E11D48;exitX=1;exitY=0.3;entryX=1;entryY=0.5;" target="orch_bg" value="OVERRIDE → re-route (max 1×)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="465" />
+              <mxPoint x="1180" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a7" edge="1" parent="1" source="plan_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#D97706;strokeWidth=2.5;fontSize=9;fontColor=#D97706;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="draft_bg" value="execution plan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a8" edge="1" parent="1" source="plan_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0D9488;strokeWidth=1.5;dashed=1;fontSize=9;fontColor=#0D9488;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="gc_bg" value="plan (parallel)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="681" />
+              <mxPoint x="220" y="782" />
+              <mxPoint x="428" y="782" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#E11D48;strokeWidth=2;dashed=1;fontSize=9;fontColor=#E11D48;" value="assembled draft (greeting + body + closing)">
+          <mxGeometry relative="1" x="0.5357" y="-2" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="612" y="988" as="sourcePoint" />
+            <mxPoint x="530" y="1030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a10" edge="1" parent="1" source="gc_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0D9488;strokeWidth=1.5;dashed=1;fontSize=9;fontColor=#0D9488;exitX=0.5;exitY=1;entryX=0.07;entryY=1.167;entryDx=0;entryDy=0;entryPerimeter=0;" target="data_divider" value="                      greeting + closing text">
+          <mxGeometry relative="1" x="0.3635" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="428" y="1020" />
+              <mxPoint x="100" y="1020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a11" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#E11D48;strokeWidth=1.5;dashed=1;fontSize=9;fontColor=#E11D48;entryX=1;entryY=0.879;entryDx=0;entryDy=0;entryPerimeter=0;" target="draft_bg" value="REVISE + feedback (max 2×)">
+          <mxGeometry relative="1" x="0.2221" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="978" y="1156" />
+              <mxPoint x="978" y="1159" />
+              <mxPoint x="1170" y="1159" />
+              <mxPoint x="1170" y="986" />
+            </Array>
+            <mxPoint x="979" y="1156" as="sourcePoint" />
+            <mxPoint x="1053" y="1015" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a12" edge="1" parent="1" source="crit2_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#EA580C;strokeWidth=2;fontSize=9;fontColor=#EA580C;exitX=0.2;exitY=1;entryX=0.5;entryY=0;" target="email_bg" value="APPROVED">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="402" y="1214" />
+              <mxPoint x="367" y="1214" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a13" edge="1" parent="1" source="crit2_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#16A34A;strokeWidth=2;fontSize=9;fontColor=#16A34A;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="wa_bg" value="APPROVED">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="618" y="1214" />
+              <mxPoint x="602" y="1214" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a14" edge="1" parent="1" source="crit2_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#9333EA;strokeWidth=2;fontSize=9;fontColor=#9333EA;exitX=0.8;exitY=1;entryX=0.5;entryY=0;" target="voice_bg" value="APPROVED">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="834" y="1214" />
+              <mxPoint x="853" y="1214" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a15" edge="1" parent="1" source="orch_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#B45309;strokeWidth=2.5;fontSize=9;fontColor=#B45309;exitX=1;exitY=0.5;entryX=0;entryY=0.2;" target="human_bg" value="ESCALATE (distress/HNI/3× obj)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="978" y="294" />
+              <mxPoint x="1200" y="294" />
+              <mxPoint x="1200" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a16" edge="1" parent="1" source="email_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#475569;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=1;entryX=0.15;entryY=0;" target="sqlite_bg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a17" edge="1" parent="1" source="wa_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#475569;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=1;entryX=0.35;entryY=0;" target="sqlite_bg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a18" edge="1" parent="1" source="voice_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#475569;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=1;entryX=0.55;entryY=0;" target="sqlite_bg" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a19" edge="1" parent="1" source="sqlite_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#475569;strokeWidth=1.5;dashed=1;fontSize=9;fontColor=#475569;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="fastapi" value="webhook event → resume graph">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="42" y="1513" />
+              <mxPoint x="42" y="159" />
+              <mxPoint x="660" y="159" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a20" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#C2410C;strokeWidth=1.5;dashed=1;fontSize=9;fontColor=#C2410C;entryX=0.524;entryY=1.008;entryDx=0;entryDy=0;entryPerimeter=0;" value="reads all tables">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1226" y="1649" />
+              <mxPoint x="388" y="1649" />
+              <mxPoint x="388" y="1592" />
+              <mxPoint x="390" y="1592" />
+            </Array>
+            <mxPoint x="1250" y="1563" as="sourcePoint" />
+            <mxPoint x="389.9200000000001" y="1574.976" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a21" edge="1" parent="1" source="dash_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#C2410C;strokeWidth=1.5;dashed=1;fontSize=9;fontColor=#C2410C;exitX=0;exitY=0.3;entryX=1;entryY=0.5;" target="chroma_bg" value="objection CRUD">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a22" edge="1" parent="1" source="human_bg" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#B45309;strokeWidth=1.5;dashed=1;exitX=0.5;exitY=1;entryX=0.85;entryY=0;" target="sqlite_bg" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1406" y="1430" />
+              <mxPoint x="610" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
