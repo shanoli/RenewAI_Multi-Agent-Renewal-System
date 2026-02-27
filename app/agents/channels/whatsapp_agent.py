@@ -38,3 +38,23 @@ async def whatsapp_send_node(state: RenewalState) -> dict:
         "messages_sent": [f"[WHATSAPP] Sent to {state['customer_name']} | Policy: {state['policy_id']}"],
         "audit_trail": [f"[WHATSAPP_AGENT] WA message sent | Policy: {state['policy_id']}"]
     }
+
+if __name__ == "__main__":
+    import asyncio
+    # Mock state for standalone testing
+    mock_state = {
+        "policy_id": "TEST-WA-001",
+        "customer_name": "Developer Test",
+        "policy_type": "Wealth Guard",
+        "premium_due_date": "2026-07-20",
+        "greeting": "Hi,",
+        "draft_message": "This is a test WhatsApp message for renewal.",
+        "closing": "Cheers, Suraksha Life"
+    }
+    
+    async def run_test():
+        print("--- Running WhatsApp Agent Standalone Test ---")
+        result = await whatsapp_send_node(mock_state)
+        print("Result:", result)
+        
+    asyncio.run(run_test())

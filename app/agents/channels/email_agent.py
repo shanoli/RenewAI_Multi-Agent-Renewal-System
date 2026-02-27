@@ -38,3 +38,23 @@ async def email_send_node(state: RenewalState) -> dict:
         "messages_sent": [f"[EMAIL] {email_subject} → {state['customer_name']}"],
         "audit_trail": [f"[EMAIL_AGENT] Email sent | Policy: {state['policy_id']}"]
     }
+
+if __name__ == "__main__":
+    import asyncio
+    # Mock state for standalone testing
+    mock_state = {
+        "policy_id": "TEST-EMAIL-001",
+        "customer_name": "Developer Test",
+        "policy_type": "Term Life",
+        "premium_due_date": "2026-05-01",
+        "greeting": "Hello,",
+        "draft_message": "This is a test renewal email.",
+        "closing": "Regards, RenewAI"
+    }
+    
+    async def run_test():
+        print("--- Running Email Agent Standalone Test ---")
+        result = await email_send_node(mock_state)
+        print("Result:", result)
+        
+    asyncio.run(run_test())

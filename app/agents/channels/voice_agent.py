@@ -45,3 +45,23 @@ async def voice_send_node(state: RenewalState) -> dict:
         result["distress_flag"] = True
         result["audit_trail"].append("[VOICE_AGENT] ⚠️ ESCALATE marker found in voice script")
     return result
+
+if __name__ == "__main__":
+    import asyncio
+    # Mock state for standalone testing
+    mock_state = {
+        "policy_id": "TEST-VOICE-001",
+        "customer_name": "Developer Test",
+        "policy_type": "Life Plus",
+        "premium_due_date": "2026-06-12",
+        "greeting": "Hello,",
+        "draft_message": "This is a test renewal call script. [ESCALATE]",
+        "closing": "Thank you."
+    }
+    
+    async def run_test():
+        print("--- Running Voice Agent Standalone Test ---")
+        result = await voice_send_node(mock_state)
+        print("Result:", result)
+        
+    asyncio.run(run_test())
